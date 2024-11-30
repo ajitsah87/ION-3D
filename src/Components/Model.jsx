@@ -6,7 +6,7 @@ import * as THREE from 'three'
 
 export default function Model() {
   const modelRef = useRef()
-  const { scene } = useGLTF('./src/assets/model.glb')
+  const { scene } = useGLTF('/assets/model.glb')
 
   const [baseScale, setBaseScale] = useState(() => {
     return window.innerWidth < 578 ? 1.5 : 1.8

@@ -1,8 +1,7 @@
-
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment, Center } from '@react-three/drei'
 import Model from './Components/Model'
-
+import './App.css'
 export default function App() {
   return (
     <div className="fixed inset-0 w-full h-full overflow-hidden">
@@ -11,11 +10,11 @@ export default function App() {
         autoPlay 
         muted 
         loop 
-        playsInline
+        webkit-playsinline
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source 
-          src="./src/assets/video1.mp4" 
+          src="/assets/video1.mp4" 
           type="video/mp4"
         />
       </video>
@@ -69,7 +68,7 @@ export default function App() {
           COMING SOON
         </h1>
         <img
-          src="./src/assets/Vector.png" 
+          src="/assets/Vector.png" 
           alt="Logo"
           className="w-8 " 
         />
