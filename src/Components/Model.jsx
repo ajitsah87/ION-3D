@@ -9,7 +9,7 @@ export default function Model() {
   const { scene } = useGLTF('/assets/model.glb')
 
   const [baseScale, setBaseScale] = useState(() => {
-    return window.innerWidth < 578 ? 1.5 : 1.8
+    return window.innerWidth < 578 ? 1.5 : 2.2
   })
 
   useEffect(() => {

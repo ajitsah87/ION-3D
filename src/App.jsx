@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment, Center } from '@react-three/drei'
 import Model from './Components/Model'
-import './App.css'
 export default function App() {
   return (
     <div className="fixed inset-0 w-full h-full overflow-hidden">
@@ -10,7 +9,7 @@ export default function App() {
         autoPlay 
         muted 
         loop 
-        webkit-playsinline
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source 
@@ -25,7 +24,7 @@ export default function App() {
       {/* 3D Canvas */}
       <Canvas
         camera={{
-          position: [0, 0, 4], // Adjusted camera position
+          position: [0, -2, 4], // Adjusted camera position
           fov: 50, // Narrower FOV for better perspective
           near: 0.1,
           far: 1000,
@@ -35,10 +34,11 @@ export default function App() {
           enableDamping
           dampingFactor={0.05}
           rotateSpeed={0.5}
-          minPolarAngle={Math.PI / 2.5}
-          maxPolarAngle={Math.PI / 2.5}
+          minPolarAngle={Math.PI / 3.5}
+          maxPolarAngle={Math.PI / 1.8}
           enableZoom={false}
           enablePan={false}
+          target={[0,0,0]}
         />
 
         {/* Enhanced lighting setup */}
